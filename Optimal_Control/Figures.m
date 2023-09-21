@@ -133,19 +133,3 @@ subplot(2,2,2);plot(t,u13,'m','LineWidth',1.5);title('Both $u_1$ and $u_2$','int
 subplot(2,2,4);plot(t,u23,'m','LineWidth',1.5);xlabel('Weeks');ylabel('$u_2$');...
    set(gca,'Fontsize',14)
 axis tight
-%%
-rat([J0 J01  J02])
-%%
-rat([J1 J11  J12]) 
-%%
-rat([J2 J21  J22]) 
-%%
-rat([J3 J31  J32])
-%%
-disp(rat([total0 total3 total1 total2]))
-%%
-rat([vac0 vac3  vac1 vac2])
-%%
-disp(rat([J0 J3 J1 J2]))
-%%
-disp(rat([total11 total22 total33]))
