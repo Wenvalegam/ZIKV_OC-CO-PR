@@ -44,7 +44,7 @@ R0=0;
 %% Total human and mosquito population are constant
 N=S0+V0+E0+I0+R0;
 Nv=Sv0+Ev0+Iv0;
-%% Interpolating controls and states (not sure how it works yet)
+%% Interpolating controls and states
 x=interp1(tvec,x,t);
 u1=pchip(tvec,u1,t);
 u2=pchip(tvec,u2,t);
