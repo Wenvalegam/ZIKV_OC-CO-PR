@@ -1,6 +1,5 @@
 function [ dlambda ] = zikaadjoints_2(t,lambda,tvec,x,u1,u2,phi,pars,fixpar,weights,IC)
 %% Parameter definitions
-%%%% Parameteres based on Dr. Rios student%%%%% 
 % mu=1/(52*80); %Birth and death rate
 % %b1=2.85; %mosquito human contact rate
 % %a1=0.63; %sexual transmission rate
@@ -33,8 +32,6 @@ b2=pars(2); %human mosquito contact rate
 a1=pars(3); %sexual transmission rate
 k=pars(4);  %incubation period 
 c2=pars(5); %rate at which exposed mosquito become infectious
-%pars=[ 2.85  1.45  0.63   1.19    0.67];
-%pars=[ b1  b2   a1   k    c2];
 %% Initial conditions (note that transversality cond. are input in the main code ode45zikaOC)
 S0=IC(1);
 V0=IC(2);
