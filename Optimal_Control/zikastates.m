@@ -33,7 +33,6 @@ b2=pars(2); %human mosquito contact rate
 a1=pars(3); %sexual transmission rate
 k=pars(4);  %incubation period 
 c2=pars(5); %rate at which exposed mosquito become infectious
-%pars=[ 2.85  1.45  0.63   1.19    0.67];
 %pars=[ b1  b2   a1   k    c2];
 %% Initial conditions 
 S0=IC(1);
@@ -47,7 +46,7 @@ R0=0;
 %% Total human and mosquito pop are constant
 N=S0+V0+E0+I0+R0;
 Nv=Sv0+Ev0+Iv0;
-%% Interpolating controls (not sure how it works yet)
+%% Interpolating controls
 u1=pchip(tvec,u1,t);
 u2=pchip(tvec,u2,t);
 phi=pchip(tvec,phi,t);
