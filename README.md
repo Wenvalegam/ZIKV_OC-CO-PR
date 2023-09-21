@@ -1,9 +1,28 @@
-# Optimal Control Applied to Zika Virus Epidemics in Colombia and Puerto Rico (2023). Wencel Valega Mackenzie, Karen Rios-Soto, Suzanne Lenhart
+# Optimal Control Applied to Zika Virus Epidemics in Colombia and Puerto Rico (2023)
+Authors: Wencel Valega Mackenzie, Karen Rios-Soto, Suzanne Lenhart
 
-## This repository has been created to reproduce the numerical results in Valega-Mackenzie et. al, 2023. 
+## Overview
+This repository contains code to reproduce the numerical results presented in our paper (citation goes here). It provides MATLAB files and instructions for simulating and estimating parameters related to Zika virus epidemics in Colombia and Puerto Rico.
 
-The folder [Optimal_Control](Optimal_Control) contains the MATLAB files to reproduce the numerical simulations for Colombia and Puerto Rico in the numerical simulation section of the paper. The [ODE45zikaOC](Optimal_Control/ode45zikaOC.m) file contains the Forward Backward Sweep method which needs the state system, [zikastates](Optimal_Control/zikastates.m) and adjoint system,  [zikaadjonts](Optimal_Control/zikaadjoints.m) (for $J_1$) or [zikaadjonts_2](Optimal_Control/zikaadjoints.m) (for $J_2$)  respectively to run. The [Figure](Optimal_Control/Figures.m) file has the parameters for each country to run all the cases and generate the figures illustrated in the paper. 
+## Folder Structure
+- **Optimal_Control**: Contains MATLAB files for numerical simulations.
+  - [ode45zikaOC.m](Optimal_Control/ode45zikaOC.m): Implements the Forward Backward Sweep method.
+  - [zikastates.m](Optimal_Control/zikastates.m): Defines the state system.
+  - [zikaadjoints.m](Optimal_Control/zikaadjoints.m): Defines the adjoint system for J1.
+  - [zikaadjoints_2.m](Optimal_Control/zikaadjoints_2.m): Defines the adjoint system for J2.
+  - [Figures.m](Optimal_Control/Figures.m): Contains parameters for generating figures.
 
-The folder [Par_estimation](Par_estimation) contains the MATLAB files to implement the parameter estimation using fmincon and multistart functions. The [zikaoc_multistart](Par_estimation/zikaoc_multistart.m) file has the fmincon and multistart routine to estimate the model parameter values for each country using their corresponding error functions in [errorfun_CO](Par_estimation/errorfun_CO.m) and [errorfun_PR](Par_estimation/errorfun_PR.m). The error functions need to approximate the solutions of the model in absence of control using the [ode45zika](Par_estimation/ode45zika.m) file. Once the parameters of the model have been estimated, run the files [Zika_Data_CO](Par_estimation/Zika_Data_CO.m) and [Zika_Data_PR](Par_estimation/Zika_Data_PR.m) to display the figure overlapping the incidence data and predicted incidence using the estimated parameters.
+- **Par_estimation**: Contains MATLAB files for parameter estimation.
+  - [zikaoc_multistart.m](Par_estimation/zikaoc_multistart.m): Implements parameter estimation using fmincon and multistart.
+  - [errorfun_CO.m](Par_estimation/errorfun_CO.m): Error function for parameter estimation in Colombia.
+  - [errorfun_PR.m](Par_estimation/errorfun_PR.m): Error function for parameter estimation in Puerto Rico.
+  - [ode45zika.m](Par_estimation/ode45zika.m): Approximates solutions of the model without controls.
+  - [Zika_Data_CO.m](Par_estimation/Zika_Data_CO.m): Displays figures for incidence data and predictions in Colombia.
+  - [Zika_Data_PR.m](Par_estimation/Zika_Data_PR.m): Displays figures for incidence data and predictions in Puerto Rico.
 
-All MATLAB files run for MATLAB version R2021 or above.
+## Requirements
+- MATLAB R2021 or above.
+- MATLAB Optimization Toolbox
+
+## Citation
+If you use this code in your research, please cite our paper [citation goes here].
