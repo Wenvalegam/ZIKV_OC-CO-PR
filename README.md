@@ -6,4 +6,4 @@ The folder [Optimal_Control](Optimal_Control) contains the MATLAB files to repro
 
 The folder [Par_estimation](Par_estimation) contains the MATLAB files to implement the parameter estimation using fmincon and multistart functions. The [zikaoc_multistart](Par_estimation/zikaoc_multistart.m) file has the fmincon and multistart routine to estimate the model parameter values for each country using their corresponding error functions in [errorfun_CO](Par_estimation/errorfun_CO.m) and [errorfun_PR](Par_estimation/errorfun_PR.m). The error functions need to approximate the solutions of the model in absence of control using the [ode45zika](Par_estimation/ode45zika.m) file. Once the parameters of the model have been estimated, run the files [Zika_Data_CO](Par_estimation/Zika_Data_CO.m) and [Zika_Data_PR](Par_estimation/Zika_Data_PR.m) to display the figure overlapping the incidence data and predicted incidence using the estimated parameters.
 
-All MATLAB files run for versions R2021 or above.
+All MATLAB files run for MATLAB version R2021 or above.
