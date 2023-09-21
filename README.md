@@ -1,4 +1,4 @@
-# Optimal Control Applied to Zika Virus Epidemics in Colombia and Puerto Rico (2023). Wencel Valega Mackenzie, Karen Rios-Soto, Suzanne Lenhart
+# Optimal Control Applied to Zika Virus Epidemics in Colombia and Puerto Rico (2023). Wencel Valega Mackenzie, Karen R/'ios-Soto, Suzanne Lenhart
 
 ## This repository has been created to reproduce the numerical results in Valega-Mackenzie et. al, 2023. 
 
