@@ -10,7 +10,7 @@ This repository contains code to reproduce the numerical results presented in ou
   - [zikastates.m](Optimal_Control/zikastates.m): Defines the state system.
   - [zikaadjoints.m](Optimal_Control/zikaadjoints.m): Defines the adjoint system for J1.
   - [zikaadjoints_2.m](Optimal_Control/zikaadjoints_2.m): Defines the adjoint system for J2.
-  - [Figures.m](Optimal_Control/Figures.m): Contains parameters for generating figures.
+  - [Figures.m](Optimal_Control/Figures.m): Contains parameters for generating figures with controls.
 
 - **[Par_estimation](Par_estimation)**: Contains MATLAB files for parameter estimation.
   - [zikaoc_multistart.m](Par_estimation/zikaoc_multistart.m): Implements parameter estimation using fmincon and multistart.
